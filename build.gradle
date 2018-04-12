@@ -1,0 +1,29 @@
+apply plugin: 'java'
+
+group = 'hamilton108'
+
+version = '1.2'
+
+repositories {
+    mavenCentral()
+}
+
+/*
+sourceSets {
+    main {
+        output.classesDir = 'build/classes'
+    }
+}
+*/
+
+dependencies {
+    //------------------- aspectj -------------------
+    // compile "org.aspectj:aspectjrt:$aspectjVersion"
+    compile "net.sourceforge.htmlunit:htmlunit:$htmlunitVersion"
+}
+
+def jarFile = new File("$libsDir/oahu-${version}.jar")
+
+task copyToParentProject(type: Copy, dependsOn: jar) {
+    into parentDist from jarFile
+}
