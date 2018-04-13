@@ -3,9 +3,10 @@ package oahu.financial.html;
 import oahu.dto.Tuple;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.Optional;
 
-public interface EtradeDownloader<HtmlPageType> {
+public interface EtradeDownloader<HtmlPageType, P extends Serializable> {
     HtmlPageType downloadDerivatives(String ticker) throws IOException;
     HtmlPageType downloadIndex(String stockIndex) throws IOException;
     HtmlPageType downloadPaperHistory(String ticker) throws IOException;
