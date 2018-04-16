@@ -9,5 +9,7 @@ public interface OptionPurchase {
     List<Critter> acceptedForSale();
     String getOptionName();
     Optional<DerivativePrice> getDerivativePrice();
+    int getOid();
+    boolean isFullySold();
 }
 
