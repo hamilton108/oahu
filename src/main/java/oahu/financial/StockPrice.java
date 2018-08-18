@@ -16,6 +16,7 @@ public interface StockPrice {
     LocalDate getLocalDx();
     LocalTime getTm();
     int getOid();
+    int getStockId();
     void assign(StockPrice other);
     List<DerivativePrice> getOptionPrices();
 }
