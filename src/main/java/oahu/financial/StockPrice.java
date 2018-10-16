@@ -11,7 +11,7 @@ public interface StockPrice {
     double getLo();
     double getCls();
     double getMarketValue();
-    int getVolume();
+    long getVolume();
     Stock getStock();
     LocalDate getLocalDx();
     LocalTime getTm();
