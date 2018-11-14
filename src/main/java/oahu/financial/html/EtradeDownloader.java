@@ -7,6 +7,7 @@ import java.io.Serializable;
 import java.util.Optional;
 
 public interface EtradeDownloader<HtmlPageType, P extends Serializable> {
+    HtmlPageType downloadDerivatives() throws IOException;
     HtmlPageType downloadDerivatives(String ticker) throws IOException;
     HtmlPageType downloadIndex(String stockIndex) throws IOException;
     HtmlPageType downloadPaperHistory(String ticker) throws IOException;
