@@ -26,4 +26,5 @@ public interface EtradeRepository<T,T2> {
     Tuple3<Optional<StockPrice>,Collection<DerivativePrice>,Collection<DerivativePrice>>
         parseHtmlFor(String ticker,File suppliedFile);
 
+    void invalidateCache();
 }
