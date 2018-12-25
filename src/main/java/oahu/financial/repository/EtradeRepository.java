@@ -14,8 +14,11 @@ public interface EtradeRepository<T,T2> {
     public static enum PersistentCategory { OPTION_REF, OPTION_PRICE, STOCK_PRICE, ALL};
     Optional<DerivativePrice> findDerivativePrice(T optionInfo);
     Optional<StockPrice> stockPrice(String ticker);
+    Optional<StockPrice> stockPrice(int oid);
     Collection<DerivativePrice> puts(String ticker);
+    Collection<DerivativePrice> puts(int oid);
     Collection<DerivativePrice> calls(String ticker);
+    Collection<DerivativePrice> calls(int oid);
     Collection<Derivative> callPutDefs(String ticker);
 
     //void saveToPersistentDataStore(PersistentCategory category);
