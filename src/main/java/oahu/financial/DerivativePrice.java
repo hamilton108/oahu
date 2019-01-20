@@ -21,4 +21,5 @@ public interface DerivativePrice {
     public double getCurrentRiscOptionValue();
     public double getCurrentRisc();
     public Optional<Double> getCurrentRiscStockPrice();
+    void resetRiscCalc();
 }
