@@ -34,6 +34,7 @@ public class SellRuleArgs {
 
     @Override
     public String toString(){
-        return String.format("[SellRuleArgs] DFB: %.2f, DFW: %.2f, option price: %.2f, spot: %.2f");
+        return String.format("[SellRuleArgs] DFB: %.2f, DFW: %.2f, option price: %.2f, spot: %.2f",
+                diffFromBought, diffFromWatermark, optionPrice, spot);
     }
 }

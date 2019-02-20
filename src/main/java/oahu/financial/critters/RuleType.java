@@ -22,7 +22,7 @@ public enum RuleType {
     SP_FLOOR  (3, "Stock price floor (valid if current stock value above price, i.e. in the house)"),
     SP_ROOF   (4, "Stock price roof (valid if current stock value below price, i.e. in the house)"),
     OP_FLOOR  (5, "Option price floor (valid if current option value above price)"),
-    OP_ROOF   (6, "Option price floor (valid if current option value below price)"),
+    OP_ROOF   (6, "Option price roof (valid if current option value below price)"),
     DFB       (7,  "Diff from bought"),
     DW_SLIDE  (9,  "Diff from watermark slide (gradient rule)");
     RuleType(int kind, String description) {
