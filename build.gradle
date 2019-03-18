@@ -1,29 +1,25 @@
+/*plugins {
+    id 'org.springframework.boot' version '2.1.3.RELEASE'
+    id 'java'
+}
+*/
 apply plugin: 'java'
 
 group = 'hamilton108'
 
 version = '1.2'
 
+sourceCompatibility = '1.8'
+
+apply from: '/home/rcs/opt/java/gradlecommon/spring-boot-deps.gradle'
+
 repositories {
     mavenCentral()
 }
 
-/*
-sourceSets {
-    main {
-        output.classesDir = 'build/classes'
-    }
-}
-*/
-
 dependencies {
-    //------------------- aspectj -------------------
-    // compile "org.aspectj:aspectjrt:$aspectjVersion"
-    compile "net.sourceforge.htmlunit:htmlunit:$htmlunitVersion"
+    //implementation "org.mybatis.spring.boot:mybatis-spring-boot-starter:2.0.0"
+    //implementation "net.sourceforge.htmlunit:htmlunit:$htmlUnitVersion"
+
 }
 
-def jarFile = new File("$libsDir/oahu-${version}.jar")
-
-task copyToParentProject(type: Copy, dependsOn: jar) {
-    into parentDist from jarFile
-}
