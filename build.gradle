@@ -12,7 +12,7 @@ version = '1.2'
 
 sourceCompatibility = '1.8'
 
-apply from: '/home/rcs/opt/java/gradlecommon/spring-boot-deps.gradle'
+apply from: '../gradlecommon/spring-boot-deps.gradle'
 
 repositories {
     mavenCentral()
