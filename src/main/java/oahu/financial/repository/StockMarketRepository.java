@@ -2,6 +2,7 @@ package oahu.financial.repository;
 
 import oahu.exceptions.FinancialException;
 import oahu.financial.*;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 import java.util.Collection;
@@ -9,6 +10,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Consumer;
 
+
+@Component
 public interface StockMarketRepository {
     void insertDerivative(Derivative derivative, Consumer<Exception> errorHandler);
     Optional<Derivative> findDerivative(String derivativeTicker);
