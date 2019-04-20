@@ -1,16 +1,14 @@
 package oahu.financial.repository;
 
-import oahu.dto.Tuple3;
 import oahu.financial.Derivative;
 import oahu.financial.DerivativePrice;
 import oahu.financial.StockPrice;
 
-import java.io.File;
 import java.time.LocalDate;
 import java.util.Collection;
 import java.util.Optional;
 
-public interface EtradeRepository<T,T2> {
+public interface EtradeRepository<T> {
     public static enum PersistentCategory { OPTION_REF, OPTION_PRICE, STOCK_PRICE, ALL};
     Optional<DerivativePrice> findDerivativePrice(T optionInfo);
     Optional<StockPrice> stockPrice(String ticker);
@@ -26,8 +24,8 @@ public interface EtradeRepository<T,T2> {
 
     void setDownloadDate(LocalDate localDate);
 
-    Tuple3<Optional<StockPrice>,Collection<DerivativePrice>,Collection<DerivativePrice>>
-        parseHtmlFor(String ticker,File suppliedFile);
+    //Tuple3<Optional<StockPrice>,Collection<DerivativePrice>,Collection<DerivativePrice>>
+    //T2 parseHtmlFor(String ticker,File suppliedFile);
 
     void invalidateCache();
 }

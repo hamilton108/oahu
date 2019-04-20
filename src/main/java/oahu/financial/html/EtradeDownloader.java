@@ -1,10 +1,7 @@
 package oahu.financial.html;
 
-import oahu.dto.Tuple;
-
 import java.io.IOException;
 import java.io.Serializable;
-import java.util.Optional;
 
 public interface EtradeDownloader<HtmlPageType, P extends Serializable> {
     HtmlPageType downloadDerivatives() throws IOException;
