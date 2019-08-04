@@ -15,8 +15,8 @@ group = 'hamilton108'
 
 version = '1.2'
 
-//sourceCompatibility = '1.8'
-sourceCompatibility = JavaVersion.VERSION_11
+//sourceCompatibility = JavaVersion.VERSION_11
+sourceCompatibility = JavaVersion.VERSION_1_8
 
 apply from: '../gradlecommon/spring-boot-deps.gradle'
 
