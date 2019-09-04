@@ -17,6 +17,7 @@ public interface EtradeRepository<T> {
     Collection<DerivativePrice> puts(int oid);
     Collection<DerivativePrice> calls(String ticker);
     Collection<DerivativePrice> calls(int oid);
+    Collection<Derivative> callPutDefs(int oid);
     Collection<Derivative> callPutDefs(String ticker);
 
     //void saveToPersistentDataStore(PersistentCategory category);
