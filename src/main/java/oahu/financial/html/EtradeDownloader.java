@@ -2,12 +2,14 @@ package oahu.financial.html;
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.util.List;
 
 public interface EtradeDownloader<HtmlPageType, TickerInfo, P extends Serializable> {
+    List<HtmlPageType> downloadDerivatives(TickerInfo tickerInfo);
+    /*
     HtmlPageType downloadDerivatives() throws IOException;
     HtmlPageType downloadDerivatives(TickerInfo tickerInfo) throws IOException;
     HtmlPageType downloadIndex(String stockIndex) throws IOException;
-    /*
     HtmlPageType downloadPaperHistory(String ticker) throws IOException;
 
     HtmlPageType downloadDepth(String ticker) throws  IOException;
