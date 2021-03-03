@@ -11,15 +11,15 @@ import java.util.function.Consumer;
 
 
 public interface StockMarketRepository {
-    void insertDerivative(Derivative derivative, Consumer<Exception> errorHandler);
-    Optional<Derivative> findDerivative(String derivativeTicker);
+    void insertDerivative(StockOption stockOption, Consumer<Exception> errorHandler);
+    Optional<StockOption> findDerivative(String derivativeTicker);
     Stock findStock(String ticker);
 
     Collection<Stock> getStocks();
 
     Collection<StockPrice> findStockPrices(String ticker, LocalDate fromDx);
 
-    void registerOptionPurchase(DerivativePrice purchase, int purchaseType, int volume);
+    void registerOptionPurchase(StockOptionPrice purchase, int purchaseType, int volume);
     OptionPurchase registerOptionPurchase(int purchaseType, String opName, double price, int volume, double spotAtPurchase, double buyAtPurchase)
     throws FinancialException;
 
@@ -28,7 +28,7 @@ public interface StockMarketRepository {
     Collection<SpotOptionPrice> findOptionPricesStockId(int stockId, LocalDate fromDate, LocalDate toDate);
     Collection<SpotOptionPrice> findOptionPricesStockIds(List<Integer> stockIds, LocalDate fromDate, LocalDate toDate);
     Collection<SpotOptionPrice> findOptionPricesStockTix(List<String> stockTix, LocalDate fromDate, LocalDate toDate);
-    Collection<OptionPurchase>  purchasesWithSalesAll(int purchaseType, int status, Derivative.OptionType ot);
+    Collection<OptionPurchase>  purchasesWithSalesAll(int purchaseType, int status, StockOption.OptionType ot);
 
     String getTickerFor(int oid);
 }

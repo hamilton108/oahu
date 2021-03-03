@@ -3,8 +3,8 @@ package oahu.financial;
 
 import java.util.Optional;
 
-public interface DerivativePrice {
-    Derivative getDerivative();
+public interface StockOptionPrice {
+    StockOption getDerivative();
     StockPrice getStockPrice();
     double getDays();
     Optional<Double> getIvBuy();

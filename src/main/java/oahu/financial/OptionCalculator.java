@@ -7,11 +7,11 @@ package oahu.financial;
 
 public interface OptionCalculator {
 
-    double delta(DerivativePrice d);
-    double spread(DerivativePrice d);
-    double breakEven(DerivativePrice d);
-    double stockPriceFor(double optionPrice, DerivativePrice o);
-    double iv(DerivativePrice d, int priceType);
+    double delta(StockOptionPrice d);
+    double spread(StockOptionPrice d);
+    double breakEven(StockOptionPrice d);
+    double stockPriceFor(double optionPrice, StockOptionPrice o);
+    double iv(StockOptionPrice d, int priceType);
 
     double ivCall(double spot, double strike, double yearsExpiry, double optionPrice);
     double ivPut(double spot, double strike, double yearsExpiry, double optionPrice);

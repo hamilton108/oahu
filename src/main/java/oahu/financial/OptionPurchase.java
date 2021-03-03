@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface OptionPurchase {
     List<Critter> acceptedForSale();
     String getOptionName();
-    Optional<DerivativePrice> getDerivativePrice();
+    Optional<StockOptionPrice> getDerivativePrice();
     int getOid();
     boolean isFullySold();
 }

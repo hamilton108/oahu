@@ -2,7 +2,7 @@ package oahu.financial;
 
 import java.time.LocalDate;
 
-public interface Derivative {
+public interface StockOption {
     public static int BUY = 1;
     public static int SELL = 2;
 

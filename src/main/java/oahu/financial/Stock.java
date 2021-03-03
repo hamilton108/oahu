@@ -8,5 +8,5 @@ public interface Stock {
     int getTickerCategory();
     int getOid();
     List<StockPrice> getPrices();
-    List<Derivative> getDerivatives();
+    List<StockOption> getDerivatives();
 }

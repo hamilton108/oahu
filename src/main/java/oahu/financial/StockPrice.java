@@ -18,5 +18,5 @@ public interface StockPrice {
     int getOid();
     int getStockId();
     void assign(StockPrice other);
-    List<DerivativePrice> getOptionPrices();
+    List<StockOptionPrice> getOptionPrices();
 }
