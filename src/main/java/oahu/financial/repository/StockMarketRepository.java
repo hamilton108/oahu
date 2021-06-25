@@ -14,10 +14,12 @@ public interface StockMarketRepository {
     void insertDerivative(StockOption stockOption, Consumer<Exception> errorHandler);
     Optional<StockOption> findDerivative(String derivativeTicker);
     Stock findStock(String ticker);
+    Stock findStock(int oid);
 
     Collection<Stock> getStocks();
 
     Collection<StockPrice> findStockPrices(String ticker, LocalDate fromDx);
+    Collection<StockPrice> findStockPrices(int oid, LocalDate fromDx);
 
     void registerOptionPurchase(StockOptionPrice purchase, int purchaseType, int volume);
     OptionPurchase registerOptionPurchase(int purchaseType, String opName, double price, int volume, double spotAtPurchase, double buyAtPurchase)
