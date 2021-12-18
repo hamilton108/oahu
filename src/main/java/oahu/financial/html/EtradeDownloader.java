@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.util.List;
 
-public interface EtradeDownloader<HtmlPageType, TickerInfo, P extends Serializable> {
-    List<HtmlPageType> downloadDerivatives(TickerInfo tickerInfo);
+public interface EtradeDownloader<T, TickerInfo, P extends Serializable> {
+    T downloadDerivatives(TickerInfo tickerInfo);
     /*
     HtmlPageType downloadDerivatives() throws IOException;
     HtmlPageType downloadDerivatives(TickerInfo tickerInfo) throws IOException;
