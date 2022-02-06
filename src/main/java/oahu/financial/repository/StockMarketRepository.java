@@ -1,13 +1,11 @@
 package oahu.financial.repository;
 
-import oahu.exceptions.FinancialException;
 import oahu.financial.*;
 
 import java.time.LocalDate;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
-import java.util.function.Consumer;
 
 
 public interface StockMarketRepository {
@@ -51,4 +49,7 @@ public interface StockMarketRepository {
     Collection<OptionPurchase>  purchasesWithSalesAll(int purchaseType, int status, StockOption.OptionType ot);
 
     String getTickerFor(int oid);
+
+    List<OptionPurchase> activePurchasesWithCritters(int purchaseType);
+
 }
