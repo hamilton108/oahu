@@ -13,7 +13,7 @@ apply plugin: 'java'
 
 group = 'hamilton108'
 
-version = '2.2.0-SNAPSHOT'
+version = '3.0.0-SNAPSHOT'
 
 //sourceCompatibility = JavaVersion.VERSION_11
 sourceCompatibility = JavaVersion.VERSION_1_8
