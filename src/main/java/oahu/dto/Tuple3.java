@@ -19,4 +19,20 @@ public class Tuple3<T1,T2,T3> {
         return _third;
     }
 
+    @SuppressWarnings("unchecked")
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Tuple3)) {
+            return false;
+        }
+        Tuple3<T1,T2,T3> other = (Tuple3<T1,T2,T3>)obj;
+
+        return ((_first.equals(other.first())) &&
+                (_second.equals(other.second())) &&
+                (_third.equals(other.third())));
+    }
+    @Override
+    public int hashCode() {
+        return (_first.hashCode() ^ _second.hashCode() ^ _third.hashCode());
+    }
 }
